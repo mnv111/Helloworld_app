@@ -3,14 +3,13 @@
   hosts: myservers
   become: true
   vars: 
-      app_destination: /home/ec2-user/
+    app_destination: /home/ec2-user/
   tasks: 
-     -name: create application directory
-      file:
-        path: "{{ app_destination }}" 
-        state: directory
-
-     -name: Create index.html file 
-      copy:
-        content: "Hello World"
-        dest: "{{ app_destination }}/index.html"
+    -name: create application directory
+     file:
+       path: "{{ app_destination }}" 
+       state: directory
+    -name: Create index.html file 
+     copy:
+       content: "Hello World"
+       dest: "{{ app_destination }}/index.html"
