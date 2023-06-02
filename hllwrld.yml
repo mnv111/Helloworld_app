@@ -3,7 +3,7 @@
   hosts: myservers
   become: true
   vars: 
-    app_destination: /home/ec2-user/
+    app_destination: /home/ec2-user/hello-world-app
   tasks: 
     - name: create application directory
       file:
